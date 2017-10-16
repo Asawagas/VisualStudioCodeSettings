@@ -1,0 +1,1 @@
+# Setting files for Visual Studio Code

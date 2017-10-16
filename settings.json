@@ -1,0 +1,20 @@
+{
+    "macros": {
+        "cursor4Up": [
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp"
+        ],
+        "cursor4Down": [
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown"
+        ]
+    },
+
+    "editor.fontFamily": "MeiryoKe_Console",
+    "editor.fontSize": 14
+}
+
