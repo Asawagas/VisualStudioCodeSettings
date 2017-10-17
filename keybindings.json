@@ -196,7 +196,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+alt+,",
+        "key": "shift+alt+m",
         "command": "editor.action.smartSelect.shrink",
         "when": "editorTextFocus"
     },
@@ -293,5 +293,10 @@
         "command": "editor.action.jumpToBracket",
         "key": "ctrl+alt+r",
         "when": "editorTextFocus"
+    },
+    {"key": "ctrl+j", "command": "workbench.action.openPreviousEditorFromHistory" },
+    {"key": "ctrl+j", "command": "workbench.action.quickOpenNavigateNext", "when": "inQuickOpen" },
+    {   "command": "editor.action.toggleMinimap",
+        "key": "ctrl+k ctrl+m"
     }
 ]

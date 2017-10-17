@@ -15,6 +15,18 @@
     },
 
     "editor.fontFamily": "MeiryoKe_Console",
-    "editor.fontSize": 14
+    "editor.fontSize": 14,
+    "files.autoGuessEncoding":true,
+    // 現在行をガターを含めてハイライトするので視認性が上がる
+    "editor.renderLineHighlight": "all",
+    // Quick Openで開いたファイルはプレビューにしない方が使いやすい
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    // ホワイトスペースを表示する。ただし単語間の単一スペースは表示しない
+    "editor.renderWhitespace": "boundary",
+    // 制御文字を表示する
+    "editor.renderControlCharacters": true,
+    // codeコマンドで(ディレクトリではなく)ファイルを開いたときは、既に開いているウインドウがあればそこに表示する
+    "window.openFilesInNewWindow":"off",
+    "window.restoreWindows": "all"
 }
 
