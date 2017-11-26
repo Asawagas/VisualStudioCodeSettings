@@ -27,6 +27,32 @@
     "editor.renderControlCharacters": true,
     // codeコマンドで(ディレクトリではなく)ファイルを開いたときは、既に開いているウインドウがあればそこに表示する
     "window.openFilesInNewWindow":"off",
-    "window.restoreWindows": "all"
+    "window.restoreWindows": "all",
+    "editor.minimap.enabled": false,
+
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。「」（）；：・？＜＞＋－＊／｛｝｜～＆％＄＃”！’　にをはがのともやか",
+
+    "[plaintext]": {
+        "editor.quickSuggestions": false,
+        "editor.acceptSuggestionOnEnter": "off",
+        "editor.wordBasedSuggestions": false
+    },
+
+    "[markdown]": {
+        "editor.tabSize": 2
+        // "editor.wordWrap": "on",
+        // "editor.quickSuggestions": false
+    },
+
+    "python.linting.lintOnTextChange": true,
+    "python.formatting.formatOnSave": true,
+    "python.linting.pylintArgs": [
+        "--disable=W0104"
+    ],
+    
+    "window.zoomLevel": 0,
+
+    "local-history.daysLimit": 90,
+    "local-history.maxDisplay": 30
 }
 

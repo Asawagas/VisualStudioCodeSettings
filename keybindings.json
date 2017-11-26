@@ -51,22 +51,26 @@
     },
     {
         "key": "alt+h",
-        "command": "cursorWordStartLeft",
+        "command": "extension.moveCamelLeftCommand",
+        // "command": "cursorWordStartLeft",
         "when": "editorTextFocus"
     },
     {
         "key": "Shift+alt+h",
-        "command": "cursorWordStartLeftSelect",
+        "command": "extension.extendCamelLeftCommand",
+        // "command": "cursorWordStartLeftSelect",
         "when": "editorTextFocus"
     },
     {
         "key": "alt+u",
-        "command": "cursorWordEndRight",
+        "command": "extension.moveCamelRightCommand",
+        // "command": "cursorWordEndRight",
         "when": "editorTextFocus"
     },
     {
         "key": "shift+alt+u",
-        "command": "cursorWordEndRightSelect",
+        "command": "extension.extendCamelRightCommand",
+        // "command": "cursorWordEndRightSelect",
         "when": "editorTextFocus"
     },
     {
@@ -121,12 +125,14 @@
     },
     {
         "key": "alt+w",
-        "command": "deleteWordLeft",
+        "command": "extension.deleteCamelLeftCommand",
+        // "command": "deleteWordLeft",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
         "key": "alt+r",
-        "command": "deleteWordRight",
+        "command": "extension.deleteCamelRightCommand",
+        // "command": "deleteWordRight",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
@@ -142,6 +148,11 @@
     {
         "key": "alt+f",
         "command": "editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "editor.action.insertLineAfter",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
@@ -222,37 +233,37 @@
         "key": "ctrl+b"
     },
     {
-        "command": "workbench.action.quickOpen",
+        "command": "workbench.action.quickOpenPreviousEditor",
         "key": "ctrl+r"
     },
     {
         "command": "list.expand",
-        "key": "alt+i",
+        "key": "i",
         "when": "listFocus"
     },
     {
         "command": "list.collapse",
-        "key": "alt+k",
+        "key": "k",
         "when": "listFocus"
     },
     {
         "command": "list.focusUp",
-        "key": "alt+e",
+        "key": "e",
         "when": "listFocus"
     },
     {
         "command": "list.focusDown",
-        "key": "alt+n",
+        "key": "n",
         "when": "listFocus"
     },
     {
         "command": "list.focusFirst",
-        "key": "alt+y",
+        "key": "-",
         "when": "listFocus"
     },
     {
         "command": "list.focusLast",
-        "key": "alt+,",
+        "key": ";",
         "when": "listFocus"
     },
     {
@@ -270,7 +281,7 @@
     },
     {
         "command": "workbench.action.navigateEditorGroups",
-        "key": "ctrl+e"
+        "key": "ctrl+n"
     },
     {
         "command": "workbench.action.moveEditorToPreviousGroup",
@@ -285,6 +296,30 @@
         "key": "ctrl+k ctrl+u"
     },
     {
+        "command": "workbench.action.openRecent",
+        "key": "ctrl+u"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpenNavigatePrevious",
+        "when": "inQuickOpen"
+    },
+    // {
+    //     "command": "workbench.action.quickOpenSelectNext",
+    //     "key": "ctrl+n",
+    //     "when": "inEditorsPicker && inQuickOpen"
+    // },
+    // {
+    //     "command": "workbench.action.quickOpenSelectNext",
+    //     "key": "ctrl+e",
+    //     "when": "inEditorsPicker && inQuickOpen"
+    // },
+    {
         "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
         "key": "ctrl+j",
         "when": "inEditorsPicker && inQuickOpen"
@@ -298,5 +333,96 @@
     {"key": "ctrl+j", "command": "workbench.action.quickOpenNavigateNext", "when": "inQuickOpen" },
     {   "command": "editor.action.toggleMinimap",
         "key": "ctrl+k ctrl+m"
+    },
+    {
+        "key": "alt+q",
+        "command": "extension.jumpy-word",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+q",
+        "command": "extension.jumpy-exit",
+        "when": "editorTextFocus && jumpy.isJumpyMode"
+    },
+    {
+        "command": "selectNextSuggestion",
+        "key": "ctrl+n",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "command": "selectPrevSuggestion",
+        "key": "ctrl+e",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "command": "selectNextPageSuggestion",
+        "key": "ctrl+v",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "command": "selectPrevPageSuggestion",
+        "key": "ctrl+c",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "alt+n",
+        "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "alt+e",
+        "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+        "key": "h",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+        "key": "p",
+        "command": "explorer.newFolder",
+        "when": "listFocus"
+    },
+    {
+        "key": "m",
+        "command": "explorer.newFile",
+        "when": "listFocus"
+    },
+    {
+        "key": "alt+a",
+        "command": "editor.action.quickFix",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    {
+        "command": "workbench.action.toggleSidebarVisibility",
+        "key": "ctrl+y"
+    },
+    { "key": "shift+enter",      "command": "jupyter.execCurrentCellAndAdvance",
+        "when": "editorTextFocus"
+    },
+    { "key": "ctrl+enter",      "command": "jupyter.execCurrentCell",
+        "when": "editorTextFocus"
+    },
+    { "key": "ctrl+alt+u",      "command": "jupyter.gotToNextCell",
+        "when": "editorTextFocus"
+    },
+    { "key": "ctrl+alt+h",      "command": "jupyter.gotToPreviousCell",
+        "when": "editorTextFocus"
+    },
+    {
+        "command": "editor.action.showHover",
+        "key": "ctrl+m",
+        "when": "editorTextFocus"
     }
 ]
