@@ -146,6 +146,26 @@
         "when": "editorTextFocus"
     },
     {
+        "command": "cursorColumnSelectDown",
+        "key": "ctrl+shift+n",
+        "when": "editorTextFocus"
+    },
+    {
+        "command": "cursorColumnSelectUp",
+        "key": "ctrl+shift+e",
+        "when": "editorTextFocus"
+    },
+    {
+        "command": "cursorColumnSelectRight",
+        "key": "ctrl+shift+k",
+        "when": "editorTextFocus"
+    },
+    {
+        "command": "cursorColumnSelectLeft",
+        "key": "ctrl+shift+i",
+        "when": "editorTextFocus"
+    },
+    {
         "key": "alt+f",
         "command": "editor.action.insertLineBefore",
         "when": "editorTextFocus && !editorReadonly"
@@ -172,16 +192,16 @@
     },
     {
         "command": "editor.action.moveLinesUpAction",
-        "key": "ctrl+alt+s",
+        "key": "ctrl+alt+o",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
         "command": "editor.action.moveLinesDownAction",
-        "key": "ctrl+alt+t",
+        "key": "ctrl+alt+s",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+h",
+        "key": "ctrl+n",
         "command": "editor.action.triggerSuggest",
         "when": "editorHasCompletionItemProvider && editorTextFocus && !editorReadonly"
     },
@@ -203,33 +223,63 @@
     },
     {
         "key": "alt+,",
-        "command": "editor.action.smartSelect.grow",
+        "command": "expand_region",
+        // "command": "editor.action.smartSelect.grow",
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+alt+m",
-        "command": "editor.action.smartSelect.shrink",
+        "key": "alt+/",
+        "command": "undo_expand_region",
+        // "command": "editor.action.smartSelect.shrink",
         "when": "editorTextFocus"
     },
-    { "key": "ctrl+t",                "command": "settings.action.search",
-        "when": "inSettingsEditor" },
-    { "key": "alt+n",                  "command": "settings.action.focusSettingsFile",
-            "when": "inSettingsSearch" },
-    { "key": "alt+n",                 "command": "toggleFindInSelection",
-            "when": "findInputFocussed" },
-    { "key": "ctrl+alt+.",              "command": "find.history.showNext",
-                "when": "editorFocus && findInputFocussed && findWidgetVisible" },
-    { "key": "ctrl+alt+,",                "command": "find.history.showPrevious",
-                "when": "editorFocus && findInputFocussed && findWidgetVisible" },
-    { "key": "alt+c",                 "command": "toggleFindCaseSensitive",
-                        "when": "findInputFocussed" },
-    { "key": "alt+b",                 "command": "toggleFindInSelection",
-                        "when": "findInputFocussed" },
-    { "key": "alt+v",                 "command": "toggleFindRegex",
-                        "when": "findInputFocussed" },
-    { "key": "alt+d",                 "command": "toggleFindWholeWord",
-                        "when": "findInputFocussed" },
-    {   "command": "workbench.action.gotoLine",
+    {
+        "key": "ctrl+t",
+        "command": "settings.action.search",
+        "when": "inSettingsEditor"
+    },
+    {
+        "key": "alt+n",
+        "command": "settings.action.focusSettingsFile",
+        "when": "inSettingsSearch"
+    },
+    {
+        "key": "alt+n",
+        "command": "toggleFindInSelection",
+        "when": "findInputFocussed"
+    },
+    {
+        "key": "ctrl+alt+.",
+        "command": "find.history.showNext",
+        "when": "editorFocus && findInputFocussed && findWidgetVisible"
+    },
+    {
+        "key": "ctrl+alt+,",
+        "command": "find.history.showPrevious",
+        "when": "editorFocus && findInputFocussed && findWidgetVisible"
+    },
+    {
+        "key": "alt+c",
+        "command": "toggleFindCaseSensitive",
+        "when": "findInputFocussed"
+    },
+    {
+        "key": "alt+b",
+        "command": "toggleFindInSelection",
+        "when": "findInputFocussed"
+    },
+    {
+        "key": "alt+v",
+        "command": "toggleFindRegex",
+        "when": "findInputFocussed"
+    },
+    {
+        "key": "alt+d",
+        "command": "toggleFindWholeWord",
+        "when": "findInputFocussed"
+    },
+    {
+        "command": "workbench.action.gotoLine",
         "key": "ctrl+b"
     },
     {
@@ -281,7 +331,7 @@
     },
     {
         "command": "workbench.action.navigateEditorGroups",
-        "key": "ctrl+n"
+        "key": "ctrl+h"
     },
     {
         "command": "workbench.action.moveEditorToPreviousGroup",
@@ -320,29 +370,27 @@
     //     "when": "inEditorsPicker && inQuickOpen"
     // },
     {
-        "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
-        "key": "ctrl+j",
-        "when": "inEditorsPicker && inQuickOpen"
+        "command": "redo",
+        "key": "ctrl+j"
     },
     {
         "command": "editor.action.jumpToBracket",
-        "key": "ctrl+alt+r",
+        "key": "ctrl+alt+w",
         "when": "editorTextFocus"
     },
-    {"key": "ctrl+j", "command": "workbench.action.openPreviousEditorFromHistory" },
-    {"key": "ctrl+j", "command": "workbench.action.quickOpenNavigateNext", "when": "inQuickOpen" },
-    {   "command": "editor.action.toggleMinimap",
+    {
+        "command": "editor.action.toggleMinimap",
         "key": "ctrl+k ctrl+m"
     },
     {
+        "command": "extension.aceJump",
         "key": "alt+q",
-        "command": "extension.jumpy-word",
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+q",
-        "command": "extension.jumpy-exit",
-        "when": "editorTextFocus && jumpy.isJumpyMode"
+        "command": "extension.aceJump.selection",
+        "key": "alt+shift+q",
+        "when": "editorTextFocus"
     },
     {
         "command": "selectNextSuggestion",
@@ -408,21 +456,61 @@
         "command": "workbench.action.toggleSidebarVisibility",
         "key": "ctrl+y"
     },
-    { "key": "shift+enter",      "command": "jupyter.execCurrentCellAndAdvance",
+    {
+        "key": "shift+enter",
+        "command": "jupyter.execCurrentCellAndAdvance",
         "when": "editorTextFocus"
     },
-    { "key": "ctrl+enter",      "command": "jupyter.execCurrentCell",
+    {
+        "key": "ctrl+enter",
+        "command": "jupyter.execCurrentCell",
         "when": "editorTextFocus"
     },
-    { "key": "ctrl+alt+u",      "command": "jupyter.gotToNextCell",
+    {
+        "key": "ctrl+shift+u",
+        "command": "jupyter.gotToNextCell",
         "when": "editorTextFocus"
     },
-    { "key": "ctrl+alt+h",      "command": "jupyter.gotToPreviousCell",
+    {
+        "key": "ctrl+shift+h",
+        "command": "jupyter.gotToPreviousCell",
         "when": "editorTextFocus"
     },
     {
         "command": "editor.action.showHover",
         "key": "ctrl+m",
         "when": "editorTextFocus"
+    },
+    {
+        "command": "editor.action.changeAll",
+        "key": "ctrl+alt+m",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "command": "newFile.createNewFile",
+        "key": "ctrl+alt+r"
+    },
+    {
+        "command": "editor.action.nextMatchFindAction",
+        "key": "ctrl+alt+u",
+        "when": "editorFocus"
+    },
+    {
+        "command": "editor.action.previousMatchFindAction",
+        "key": "ctrl+alt+h",
+        "when": "editorFocus"
+    },
+    {
+        "command": "center-editor-window.center",
+        "key": "ctrl+i",
+        "when": "editorTextFocus"
+    },
+    {
+        "command": "workbench.action.navigateForward",
+        "key": "ctrl+alt+y"
+    },
+    {
+        "command": "workbench.action.navigateBack",
+        "key": "alt+left+u"
     }
 ]

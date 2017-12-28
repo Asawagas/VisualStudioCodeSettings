@@ -32,10 +32,14 @@
 
     "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。「」（）；：・？＜＞＋－＊／｛｝｜～＆％＄＃”！’　にをはがのともやか",
 
+    "workbench.colorCustomizations": {
+        "editorLineNumber.foreground": "#888888"
+    },
+
     "[plaintext]": {
         "editor.quickSuggestions": false,
-        "editor.acceptSuggestionOnEnter": "off",
-        "editor.wordBasedSuggestions": false
+        "editor.acceptSuggestionOnEnter": "off"
+        // "editor.wordBasedSuggestions": false
     },
 
     "[markdown]": {
@@ -53,6 +57,9 @@
     "window.zoomLevel": 0,
 
     "local-history.daysLimit": 90,
-    "local-history.maxDisplay": 30
+    "local-history.maxDisplay": 30,
+    "local-history.saveDelay": 60,
+    "local-history.path": "C:/Users/tn26o/.vscode",
+    "jupyter.appendResults": false
 }
 
