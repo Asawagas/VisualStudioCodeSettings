@@ -48,11 +48,17 @@
         // "editor.quickSuggestions": false
     },
 
-    "python.linting.lintOnTextChange": true,
-    "python.formatting.formatOnSave": true,
+    "[python]": {
+        "editor.formatOnSave": true,
+    },
+    "python.linting.lintOnSave": true,
+    "files.autoSave": "afterDelay",
+    //"python.linting.lintOnTextChange": true,
+
     "python.linting.pylintArgs": [
         "--disable=W0104"
     ],
+    "python.pythonPath": "C:\\Users\\tn26o\\Anaconda3\\envs\\py35",
     
     "window.zoomLevel": 0,
 
